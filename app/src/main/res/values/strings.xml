@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Book Car</string>
+    <string name="car_image">Image Car</string>
+
 </resources>
