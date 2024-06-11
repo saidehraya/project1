@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RequestRentCarActivity">
+
+    <!-- Car Name -->
+    <TextView
+        android:id="@+id/textViewCarNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Car Name:"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/editTextCarName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Enter car name"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewCarNameLabel"
+        app:layout_constraintTop_toTopOf="@id/textViewCarNameLabel" />
+
+    <!-- Car Model -->
+    <TextView
+        android:id="@+id/textViewCarModelLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Car Model:"
+        app:layout_constraintTop_toBottomOf="@id/editTextCarName"
+        app:layout_constraintStart_toStartOf="@id/textViewCarNameLabel"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextCarModel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Enter car model"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewCarModelLabel"
+        app:layout_constraintTop_toTopOf="@id/textViewCarModelLabel" />
+
+    <!-- Start Date -->
+    <TextView
+        android:id="@+id/textViewStartDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Date:"
+        app:layout_constraintTop_toBottomOf="@id/editTextCarModel"
+        app:layout_constraintStart_toStartOf="@id/textViewCarNameLabel"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextStartDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Enter start date"
+        android:inputType="date"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewStartDateLabel"
+        app:layout_constraintTop_toTopOf="@id/textViewStartDateLabel" />
+
+    <!-- Return Date -->
+    <TextView
+        android:id="@+id/textViewReturnDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Return Date:"
+        app:layout_constraintTop_toBottomOf="@id/editTextStartDate"
+        app:layout_constraintStart_toStartOf="@id/textViewCarNameLabel"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextReturnDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Enter return date"
+        android:inputType="date"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewReturnDateLabel"
+        app:layout_constraintTop_toTopOf="@id/textViewReturnDateLabel" />
+
+    <!-- Number of Days -->
+    <TextView
+        android:id="@+id/textViewNoOfDaysLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of Days:"
+        app:layout_constraintTop_toBottomOf="@id/editTextReturnDate"
+        app:layout_constraintStart_toStartOf="@id/textViewCarNameLabel"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextNoOfDays"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Enter number of days"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewNoOfDaysLabel"
+        app:layout_constraintTop_toTopOf="@id/textViewNoOfDaysLabel" />
+
+    <!-- Number of Weeks -->
+    <TextView
+        android:id="@+id/textViewNoOfWeeksLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of Weeks:"
+        app:layout_constraintTop_toBottomOf="@id/editTextNoOfDays"
+        app:layout_constraintStart_toStartOf="@id/textViewCarNameLabel"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextNoOfWeeks"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Enter number of weeks"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewNoOfWeeksLabel"
+        app:layout_constraintTop_toTopOf="@id/textViewNoOfWeeksLabel" />
+
+    <!-- Amount Due -->
+    <TextView
+        android:id="@+id/textViewAmountDueLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount Due:"
+        app:layout_constraintTop_toBottomOf="@id/editTextNoOfWeeks"
+        app:layout_constraintStart_toStartOf="@id/textViewCarNameLabel"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextAmountDue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Enter amount due"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewAmountDueLabel"
+        app:layout_constraintTop_toTopOf="@id/textViewAmountDueLabel" />
+
+    <!-- Active -->
+    <TextView
+        android:id="@+id/textViewActiveLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Active:"
+        app:layout_constraintTop_toBottomOf="@id/editTextAmountDue"
+        app:layout_constraintStart_toStartOf="@id/textViewCarNameLabel"
+        android:layout_marginTop="16dp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxActive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@id/textViewActiveLabel"
+        app:layout_constraintTop_toTopOf="@id/textViewActiveLabel"
+        tools:ignore="DuplicateClickableBoundsCheck" />
+
+    <!-- Scheduled -->
+    <TextView
+        android:id="@+id/textViewScheduledLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scheduled:"
+        app:layout_constraintTop_toBottomOf="@id/textViewActiveLabel"
+        app:layout_constraintStart_toStartOf="@id/textViewCarNameLabel"
+        android:layout_marginTop="16dp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxScheduled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@id/textViewScheduledLabel"
+        app:layout_constraintTop_toTopOf="@id/textViewScheduledLabel" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/buttonSubmitRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Request"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxScheduled"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

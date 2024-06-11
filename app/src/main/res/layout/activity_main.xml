@@ -20,7 +20,7 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/etEmail"
+                android:id="@+id/etEmaila"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
@@ -32,7 +32,7 @@
                 android:inputType="textEmailAddress" />
 
             <EditText
-                android:id="@+id/etPassword"
+                android:id="@+id/etPassworda"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"
@@ -46,11 +46,11 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:background="#44a6c6"
                 android:onClick="login"
                 android:text="Login"
-                android:layout_margin="10dp"
-                android:textColor="@android:color/white" />
+                android:textColor="#263238" />
 
             <Button
                 android:layout_width="match_parent"
@@ -59,7 +59,7 @@
                 android:background="#44a6c6"
                 android:onClick="registerCompany"
                 android:text="Register with a rental company"
-                android:textColor="@android:color/white" />
+                android:textColor="#263238" />
 
             <Button
                 android:layout_width="match_parent"
@@ -68,7 +68,18 @@
                 android:background="#44a6c6"
                 android:onClick="register"
                 android:text="Register a new customer"
-                android:textColor="@android:color/white" />
+                android:textColor="#263238" />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#44a6c6"
+                android:onClick="AboutUs"
+                android:text="About Us "
+                android:textColor="#263238" />
+
 
         </LinearLayout>
     </ScrollView>

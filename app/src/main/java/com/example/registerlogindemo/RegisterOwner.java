@@ -8,7 +8,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
@@ -22,30 +21,31 @@ import com.android.volley.toolbox.Volley;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Register extends AppCompatActivity {
-    private EditText Fname, Lname, Phone, etEmail, etPassword, etReenterPassword;
-    private TextView tvStatus;
-    private Button btnRegister;
-    private String URL = "http://10.0.2.2/mobileProject/register.php";
-    private String firstName, lastName, email, password, reenterPassword, phoneNum;
+public class RegisterOwner extends AppCompatActivity {
+    private EditText Fname, Lname, Cname, Owner_type, etEmailO, etPasswordO, etReenterPasswordO;
+    private TextView tvStatusO;
+    private Button btnRegisterO;
+    //http://10.0.2.2/PHP_Android/
+    private String URL = "http://10.0.2.2/mobileProject/registerOwner.php";
+    private String firstName, lastName, companyName, ownerType, email, password, reenterPassword;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.register);
+        setContentView(R.layout.activity_register_owner);
 
         // Initialize UI components
-        Fname = findViewById(R.id.Fname);
-        Lname = findViewById(R.id.Lname);
-        Phone = findViewById(R.id.Phone);
-        etEmail = findViewById(R.id.etEmail);
-        etPassword = findViewById(R.id.etPassword);
-        etReenterPassword = findViewById(R.id.etReenterPassword);
-        tvStatus = findViewById(R.id.tvStatus);
-        btnRegister = findViewById(R.id.btnRegister);
+        Fname = findViewById(R.id.FnameO);
+        Lname = findViewById(R.id.LnameO);
+        Cname = findViewById(R.id.CnameO);
+        Owner_type = findViewById(R.id.Owner_type);
+        etEmailO = findViewById(R.id.etEmailO);
+        etPasswordO = findViewById(R.id.etPasswordO);
+        etReenterPasswordO = findViewById(R.id.etReenterPasswordO);
+        tvStatusO = findViewById(R.id.tvStatusO);
+        btnRegisterO = findViewById(R.id.btnRegisterO);
 
-        // Set button click listener
-        btnRegister.setOnClickListener(new View.OnClickListener() {
+        btnRegisterO.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 save(v);
@@ -57,27 +57,28 @@ public class Register extends AppCompatActivity {
         // Get input values
         firstName = Fname.getText().toString().trim();
         lastName = Lname.getText().toString().trim();
-        phoneNum = Phone.getText().toString().trim();
-        email = etEmail.getText().toString().trim();
-        password = etPassword.getText().toString().trim();
-        reenterPassword = etReenterPassword.getText().toString().trim();
+        companyName = Cname.getText().toString().trim();
+        ownerType = Owner_type.getText().toString().trim();
+        email = etEmailO.getText().toString().trim();
+        password = etPasswordO.getText().toString().trim();
+        reenterPassword = etReenterPasswordO.getText().toString().trim();
 
         // Validate inputs
         if (!password.equals(reenterPassword)) {
             Toast.makeText(this, "Password Mismatch", Toast.LENGTH_SHORT).show();
-        } else if (!firstName.equals("") && !lastName.equals("") && !phoneNum.equals("") && !email.equals("") && !password.equals("")) {
-            // Make network request to register the user
+        } else if (!firstName.equals("") && !lastName.equals("") && !companyName.equals("") && !ownerType.equals("") && !email.equals("") && !password.equals("")) {
+            // Make network request to register the owner
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
                     if (response.equals("success")) {
-                        Intent intent = new Intent(Register.this, MainActivity.class);
+                        Intent intent = new Intent(RegisterOwner.this, MainActivity.class);
                         startActivity(intent);
                         finish();
-                        tvStatus.setText("Successfully registered.");
-                        btnRegister.setClickable(false);
+                        tvStatusO.setText("Successfully registered.");
+                        btnRegisterO.setClickable(false);
                     } else if (response.equals("failure")) {
-                        tvStatus.setText("Something went wrong!");
+                        tvStatusO.setText("Something went wrong!");
                     }
                 }
             }, new Response.ErrorListener() {
@@ -89,9 +90,10 @@ public class Register extends AppCompatActivity {
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
                     Map<String, String> data = new HashMap<>();
-                    data.put("Phone", phoneNum);
-                    data.put("Lname", lastName);
                     data.put("Fname", firstName);
+                    data.put("Lname", lastName);
+                    data.put("Cname", companyName);
+                    data.put("Owner_type", ownerType);
                     data.put("email", email);
                     data.put("password", password);
                     return data;

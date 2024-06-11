@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Car ID"
-        android:inputType="number" />
+        android:inputType="number"
+        android:minHeight="48dp" />
 
     <Button
         android:id="@+id/btnFetchCar"
@@ -24,20 +25,23 @@
         android:id="@+id/etCarName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Car Name" />
+        android:hint="Car Name"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/etCarModel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Car Model" />
+        android:hint="Car Model"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/etCarYear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Car Year"
-        android:inputType="number" />
+        android:inputType="number"
+        android:minHeight="48dp" />
 
     <Button
         android:id="@+id/btnUpdateCar"

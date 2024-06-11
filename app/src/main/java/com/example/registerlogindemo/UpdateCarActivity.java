@@ -26,8 +26,8 @@ public class UpdateCarActivity extends AppCompatActivity {
 
     private EditText etCarId, etCarName, etCarModel, etCarYear;
     private Button btnFetchCar, btnUpdateCar;
-    private String fetchURL = "http://10.0.2.2/PHP_Android/get_car.php";
-    private String updateURL = "http://10.0.2.2/PHP_Android/update_car.php";
+    private String fetchURL = "http://10.0.2.2/mobileProject/get_car.php";
+    private String updateURL = "http://10.0.2.2/mobileProject/update_car.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,7 @@ public class UpdateCarActivity extends AppCompatActivity {
         etCarYear = findViewById(R.id.etCarYear);
         btnFetchCar = findViewById(R.id.btnFetchCar);
         btnUpdateCar = findViewById(R.id.btnUpdateCar);
+
 
         btnFetchCar.setOnClickListener(new View.OnClickListener() {
             @Override

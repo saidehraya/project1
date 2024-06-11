@@ -12,21 +12,27 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".SearchActivity"
+            android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".Register" />
-        <activity android:name=".MainActivity" android:exported="true" />
-        <activity android:name=".Success"></activity>
-        <activity android:name=".AddCarActivity"></activity>
-        <activity android:name=".UpdateCarActivity"></activity>
-        <activity android:name=".CarDetailsActivity"></activity>
-        <activity android:name=".HomePage"></activity>
+        <activity android:name=".StartBayActrivity" android:exported="false"/>
+        <activity android:name=".Car_deitale"/>
+        <activity android:name=".HomePage" android:exported="false"/>
+        <activity android:name=".CarPartViewF1" android:exported="false"/>
+        <activity android:name=".IndexOwner" android:exported="false"/>
+        <activity android:name=".IndexCus" android:exported="false"/>
+        <activity android:name=".RegisterOwner" android:exported="false"/>
+        <activity android:name=".Register"/>
+        <activity android:name=".MainActivity" android:exported="true"/>
+        <activity android:name=".Success"/>
+        <activity android:name=".AboutUs"/>
+        <activity android:name=".AddCarActivity"/>
+        <activity android:name=".UpdateCarActivity"/>
+        <activity android:name=".Back"/>
     </application>
 
 </manifest>

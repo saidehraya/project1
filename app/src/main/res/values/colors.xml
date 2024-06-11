@@ -1,9 +1,18 @@
 <resources>
-    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimary">#222431</color>
+    <color name="colorSecondary">#03A9F4</color>
+    <color name="colorAccent">#03A9F4</color>
+    <color name="statusBarColor">#102027</color>
     <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="background_color">#b4b4b4</color>
+    <color name="image_background_color">#F0F0F0</color>
+    <color name="primary_text_color">#000000</color>
+    <color name="secondary_text_color">#757575</color>
+    <color name="price_text_color">#FF5722</color>
     <color name="baby_blue">#AEEEEE</color>
     <color name="baby_purple">#B19CD9</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="green">#00FF0A</color>
+    <color name="red">#FF1100</color>
 </resources>
